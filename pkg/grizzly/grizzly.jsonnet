@@ -37,9 +37,7 @@ local convert(main, apiVersion) = {
         makeResource(
           'Dashboard',
           uid(k, dashboards[k]),
-          spec=dashboards[k] + {
-            uid::'',
-          },
+          spec=dashboards[k],
           metadata={ folder: folder }
         )
         for k in std.objectFields(dashboards)
